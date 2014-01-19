@@ -10,7 +10,10 @@ angular.module("getbookmarks.services", ["ngResource"]).
 angular.module("getbookmarks", ["getbookmarks.services"]).
     config(function ($routeProvider) {
         $routeProvider
-            .when('/', {templateUrl: '/assets/views/stories/list.html', controller: StoryListController})
+            .when('/', {templateUrl: 'homePage.html', controller: mainData})
+            .when('/about', {templateUrl: 'about.html', controller: mainData})
+            .when('/blog', {templateUrl: 'blog.html', controller: mainData})
+            .when('/contact', {templateUrl: 'contact.html', controller: mainData})
             .when('/stories/new', {templateUrl: '/assets/views/stories/create.html', controller: StoryCreateController})
             .when('/stories/:storyId', {templateUrl: '/assets/views/stories/detail.html', controller: StoryDetailController});
     });
@@ -35,7 +38,21 @@ function StoryCreateController($scope, $routeParams, $location, Story) {
 
 function StoryDetailController($scope, $routeParams, $location, Story) {
     var storyId = $routeParams.storyId;
-    
+
     $scope.story = Story.get({storyId: storyId});
 
+}
+function mainData($scope){
+    $scope.venture = "Smartstudy"
+    $scope.companyName = "Angular Technologies PVT. LTD."
+    $scope.companyEmail= "angulartechnologies@gmail.com"
+    $scope.contactNumber = "+918469049314"
+    $scope.companyAddress = "Chandigarh, India"
+}
+function SuperCtrl($scope){
+    $scope.venture = "Smartstudy"
+    $scope.companyName = "Angular Technologies PVT. LTD."
+    $scope.companyEmail= "angulartechnologies@gmail.com"
+    $scope.contactNumber = "+918469049314"
+    $scope.companyAddress = "Chandigarh, India"
 }

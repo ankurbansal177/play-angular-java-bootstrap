@@ -1,40 +1,332 @@
 <!DOCTYPE html>
-<html ng-app="getbookmarks">
+<html ng-app="getbookmarks" ng-controller = "SuperCtrl" lang="en">
+
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/toastr.css"/>
-    <style>
-        body {
-            padding-top: 60px;
-        }
-    </style>
-    <title>GetBookmarks : Submit Story</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{venture}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="assets/css/business-casual.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+
+<div class="brand">{{venture}}</div>
+
+<div class="address-bar">{{companyAddress}}</div>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">GetBookmarks</a>
-
+            <a class="navbar-brand" href="assets/index.html">{{companyName}}</a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/site">Home</a>
+                </li>
+                <li><a href="site#/about">About</a>
+                </li>
+                <li><a href="site#/blog">Blog</a>
+                </li>
+                <li><a href="site#/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-</div>
+    <!-- /.container -->
+</nav>
 
 <div class="container" ng-view>
+    </div>
+    <script type = "text/ng-template" id = homePage.html>
 
-</div>
+        <div class="container">
 
-<script src="assets/js/jquery-1.9.1.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/angular.js"></script>
-<script src="assets/js/angular-resource.js"></script>
-<script src="assets/js/toastr.js"></script>
-<script src="assets/js/app.js"></script>
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12 text-center">
+                        <div id="carousel-example-generic" class="carousel slide">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators hidden-xs">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <!--<img class="img-responsive img-full" src="img/slide-1.jpg">-->
+                                </div>
+                                <div class="item">
+                                    <!--<img class="img-responsive img-full" src="img/slide-2.jpg">-->
+                                </div>
+                                <div class="item">
+                                    <!--<img class="img-responsive img-full" src="img/slide-3.jpg">-->
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="icon-prev"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                        <h1>
+                            <small>Welcome to</small>
+                            <br>
+                            <span class="brand-name">{{venture}}</span>
+                            <hr class="tagline-divider">
+                            <small>By <strong>{{companyName}}</strong>
+                            </small>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12">
+                        <hr>
+                        <h2 class="intro-text text-center">You Should <strong>Study smartly</strong>
+                        </h2>
+                        <hr>
+                        <img class="img-responsive img-border img-left" src="assets/img/intro-pic.jpg">
+                        <hr class="visible-xs">
+                        <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
+                        <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12">
+                        <hr>
+                        <h2 class="intro-text text-center">Beautiful boxes <strong>to showcase your content</strong>
+                        </h2>
+                        <hr>
+                        <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </script>
+<script type = "text/ng-template" id = blog.html>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Company <strong>blog</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-lg-12 text-center">
+                <img class="img-responsive img-border img-full" src="assets/img/slide-1.jpg">
+                <h2>Post Title
+                    <br>
+                    <small>October 13, 2013</small>
+                </h2>
+                <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <a href="#" class="btn btn-default btn-lg">Read More</a>
+                <hr>
+            </div>
+            <div class="col-lg-12 text-center">
+                <img class="img-responsive img-border img-full" src="assets/img/slide-2.jpg">
+                <h2>Post Title
+                    <br>
+                    <small>October 13, 2013</small>
+                </h2>
+                <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <a href="#" class="btn btn-default btn-lg">Read More</a>
+                <hr>
+            </div>
+            <div class="col-lg-12 text-center">
+                <img class="img-responsive img-border img-full" src="assets/img/slide-3.jpg">
+                <h2>Post Title
+                    <br>
+                    <small>October 13, 2013</small>
+                </h2>
+                <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <a href="#" class="btn btn-default btn-lg">Read More</a>
+                <hr>
+            </div>
+            <div class="col-lg-12 text-center">
+                <ul class="pager">
+                    <li class="previous"><a href="#">&larr; Older</a>
+                    </li>
+                    <li class="next"><a href="#">Newer &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</script>
+<script type = "text/ng-template" id = about.html>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">About <strong>business casual</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive img-border-left" src="img/slide-2.jpg">
+            </div>
+            <div class="col-md-6">
+                <p>This is a great place to introduce your company or project and describe what you do.</p>
+                <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Our <strong>Team</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+<script type = "text/ng-template" id = contact.html>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Contact <strong>business casual</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-md-8">
+                <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?t=m&amp;q=chandigarh&amp;ie=UTF8&amp;hq=&amp;hnear=Chandigarh&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.in/maps?t=m&amp;q=chandigarh&amp;ie=UTF8&amp;hq=&amp;hnear=Chandigarh&amp;z=12&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+            </div>
+            <div class="col-md-4">
+                <p>Phone: <strong>555.519.2013</strong>
+                </p>
+                <p>Email: <strong>feedback@startbootstrap.com</strong>
+                </p>
+                <p>Address: <strong>The Plaza<br>5483 Start Bootstrap Ave.<br>Beverley Hills, CA 26829</strong>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Contact <strong>form</strong>
+                </h2>
+                <hr>
+                <p>This contact form is just the form elements, it is not a working form. You will have to make the form work by yourself, or take it out if you can't figure out how to make it work.</p>
+                <form role="form">
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label>Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label for="input3">Phone Number</label>
+                            <input type="phone" class="form-control">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label>Message</label>
+                            <textarea class="form-control" rows="6"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="hidden" name="save" value="contact">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; {{companyName}} 2013 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-resource.js"></script>
+    <script src="assets/js/toastr.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+    // Activates the Carousel
+    $('.carousel').carousel({
+        interval: 5000
+    })
+    </script>
+
 </body>
+
 </html>

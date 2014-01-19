@@ -4,6 +4,7 @@
 
 # Home page
 GET         /                           controllers.Assets.at(path="/public", file="/index.html")
+GET         /site                       controllers.Assets.at(path="/public", file="/index.html")
 GET         /api/v1/stories             controllers.StoryController.allStories()
 POST        /api/v1/stories             controllers.StoryController.submitStory()
 GET         /api/v1/stories/:storyId    controllers.StoryController.getStory(storyId)
